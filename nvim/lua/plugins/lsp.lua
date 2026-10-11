@@ -131,14 +131,7 @@ return {
     -- - settings (table): Override the default settings passed when initializing the server.
     local servers = {
       ts_ls = {},
-      ruff = {
-          -- cmd = { 'ruff', 'server' },
-          -- filetypes = { 'python' },
-          -- root_markers = { 'pyproject.toml', 'ruff.toml', '.ruff.toml', '.git' },
-          -- init_options = {
-          --   settings = {}
-          -- }
-      },
+      ruff = {},
       pylsp = {
         settings = {
           pylsp = {
@@ -155,6 +148,8 @@ return {
           },
         },
       },
+      -- basedpyright = {},
+      pyright = {},
       clangd = {
         init_options = {
           workspaceConfig = {
@@ -165,12 +160,12 @@ return {
           }
         },
       },
-      -- html = { filetypes = { 'html', 'twig', 'hbs' } },
+      html = { filetypes = { 'html', 'twig', 'hbs' } },
       -- cssls = {},
       -- tailwindcss = {},
-      -- dockerls = {},
-      -- docker_compose_language_service = {},
-      -- sqlls = {},
+      dockerls = {},
+      docker_compose_language_service = {},
+      sqlls = {},
       -- terraformls = {},
       jsonls = {},
       yamlls = {},

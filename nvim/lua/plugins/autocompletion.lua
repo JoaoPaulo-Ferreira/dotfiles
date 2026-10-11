@@ -124,20 +124,6 @@ return { -- Autocompletion
         --  This will expand snippets if the LSP sent a snippet.
         ['<C-y>'] = cmp.mapping.confirm { select = true },
 
-        -- Accept the completion and enter Normal mode.
-        ['<C-u>'] = cmp.mapping(function (fallback)
-          if cmp.visible() then
-            cmp.confirm({select = true})
-            vim.api.nvim_feedkeys(
-              vim.api.nvim_replace_termcodes("<Esc>", true, false, true),
-              "n",
-              true
-            )
-          else
-            fallback()
-          end
-        end, {'i', 's'}),
-
         -- If you prefer more traditional completion keymaps,
         -- you can uncomment the following lines
         --['<CR>'] = cmp.mapping.confirm { select = true },

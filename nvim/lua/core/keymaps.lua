@@ -1,6 +1,6 @@
 -- Set leader key
 vim.g.mapleader = ' '
--- vim.g.maplocalleader = ' '
+vim.g.maplocalleader = ' '
 
 -- Disable the spacebar key's default behavior in Normal and Visual modes
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
@@ -59,7 +59,11 @@ vim.keymap.set('n', '<leader>tn', ':tabn<CR>', opts) --  go to next tab
 vim.keymap.set('n', '<leader>tp', ':tabp<CR>', opts) --  go to previous tab
 
 -- Toggle line wrapping
-vim.keymap.set('n', '<leader>lw', '<cmd>set wrap!<CR>', opts)
+-- vim.keymap.set('n', '<leader>lw', '<cmd>set wrap!<CR>', opts)
+
+-- Adds new line below and above in normal-mode wihtout moving cursor
+vim.keymap.set('n', '<CR>', 'm`o<Esc>``')
+vim.keymap.set('n', '<S-CR>', 'm`O<Esc>``')
 
 -- Stay in indent mode
 vim.keymap.set('v', '<', '<gv', opts)
@@ -69,10 +73,10 @@ vim.keymap.set('v', '>', '>gv', opts)
 vim.keymap.set('v', 'p', '"_dP', opts)
 
 -- Paste yanked on new line below
-vim.keymap.set('n', '<C-p>', '<Cmd>put<CR>', opts)
+-- vim.keymap.set('n', '<C-p>', '<Cmd>put<CR>', opts)
 
 -- Paste yanked on new line above 
-vim.keymap.set('n', '<C-p>', '<Cmd>put!<CR>', opts)
+-- vim.keymap.set('n', '<C-p>', '<Cmd>put!<CR>', opts)
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', function()
@@ -95,7 +99,7 @@ vim.keymap.set('n', '<leader>st', function()
 end)
 
 -- run the current script in python
-vim.keymap.set('n', '<leader>run', ':!python %<CR>', opts)
+-- vim.keymap.set('n', '<leader>run', ':!python %<CR>', opts)
 
 -- Delete tab with S-T on Insert mode
 -- vim.keymap.set('i', '<S-Tab>', '<BS>', opts)

@@ -28,13 +28,16 @@ require('lazy').setup({
     require 'plugins.misc',
     require 'plugins.debug',
     require 'plugins.vimtex',
+    require 'plugins.pyrepl',
+    -- require 'plugins.iron',
+    -- require 'plugins.quarto_backup',
     require 'plugins.quarto',
-    require 'plugins.molten',
+    -- require 'plugins.molten',
     -- require 'plugins.mini-comments',
     -- require 'plugins.toggleterm',
     -- THEMES 
-    -- require 'themes.nordtheme',
-    require 'themes.kanagawa',
-    -- require 'themes.tokyonight'
+    require 'themes.nordtheme',
+    -- require 'themes.kanagawa',
+    -- require 'themes.tokyonight',
     require 'plugins.markerview'
 })
