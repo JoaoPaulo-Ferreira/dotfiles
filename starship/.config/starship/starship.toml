@@ -18,6 +18,17 @@ format = '[on](white) [$symbol$branch ]($style)'
 style = 'fg:green'
 format = '([$all_status$ahead_behind]($style) )'
 
+[python]
+style = 'teal'
+symbol = ' '
+format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+pyenv_version_name = true
+pyenv_prefix = ''
+
+[lua]
+symbol = ' '
+format = '[$symbol]($style)'
+
 [palettes.nord]
 dark_blue = '#5E81AC'
 blue = '#81A1C1'
