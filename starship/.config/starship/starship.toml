@@ -4,6 +4,7 @@ $git_branch\
 $git_staus\
 $character\
 $python
+$lua
 """
 
 palette = 'nord'
